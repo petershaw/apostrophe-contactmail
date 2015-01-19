@@ -1,0 +1,103 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'publish' ]
+2 info using npm@2.1.18
+3 info using node@v0.10.35
+4 verbose node symlink /usr/local/bin/node
+5 verbose publish [ '.' ]
+6 silly cache add args [ '.', null ]
+7 verbose cache add spec .
+8 silly cache add parsed spec { raw: '.',
+8 silly cache add   scope: null,
+8 silly cache add   name: null,
+8 silly cache add   rawSpec: '.',
+8 silly cache add   spec: '/Users/kris/Projects/apostrophe-contactmail',
+8 silly cache add   type: 'directory' }
+9 verbose addLocalDirectory /Users/kris/.npm/apostrophe-contactmail/1.0.0/package.tgz not in flight; packing
+10 verbose tar pack [ '/Users/kris/.npm/apostrophe-contactmail/1.0.0/package.tgz',
+10 verbose tar pack   '/Users/kris/Projects/apostrophe-contactmail' ]
+11 verbose tarball /Users/kris/.npm/apostrophe-contactmail/1.0.0/package.tgz
+12 verbose folder /Users/kris/Projects/apostrophe-contactmail
+13 info prepublish apostrophe-contactmail@1.0.0
+14 verbose addLocalTarball adding from inside cache /Users/kris/.npm/apostrophe-contactmail/1.0.0/package.tgz
+15 silly cache afterAdd apostrophe-contactmail@1.0.0
+16 verbose afterAdd /Users/kris/.npm/apostrophe-contactmail/1.0.0/package/package.json not in flight; writing
+17 verbose afterAdd /Users/kris/.npm/apostrophe-contactmail/1.0.0/package/package.json written
+18 silly publish { name: 'apostrophe-contactmail',
+18 silly publish   version: '1.0.0',
+18 silly publish   description: 'Contact form mailer for apostrophe cms',
+18 silly publish   main: 'index.js',
+18 silly publish   repository:
+18 silly publish    { type: 'git',
+18 silly publish      url: 'https://github.com/petershaw/apostrophe-contactmail.git' },
+18 silly publish   keywords: [ 'apostrophe', 'email', 'contact' ],
+18 silly publish   author: { name: 'Peter Shaw' },
+18 silly publish   license: 'none',
+18 silly publish   bugs: { url: 'https://github.com/petershaw/apostrophe-contactmail/issues' },
+18 silly publish   homepage: 'https://github.com/petershaw/apostrophe-contactmail',
+18 silly publish   dependencies:
+18 silly publish    { chalk: '^0.5.1',
+18 silly publish      extend: '^2.0.0',
+18 silly publish      nodemailer: '^1.3.0',
+18 silly publish      underscore: '^1.7.0',
+18 silly publish      uuid: '^2.0.1' },
+18 silly publish   readme: '# apostrophe-contactmail\nContact form mailer for apostrophe cms\n\n**Attention: This script is not secure against a script. The worst case is that someone spams your inbox.**\n\nYou have to create a block or a snippet with a email form: \n\n```html\n<form id="contact-form" class="contact-form" action="#">\n            \t<p class="contact-name">\n            \t\t<input id="contact_name" type="text" placeholder="Full Name" value="" name="name" />\n                </p>\n                <p class="contact-email">\n                \t<input id="contact_email" type="text" placeholder="Email Address" value="" name="email" />\n                </p>\n                <p class="contact-message">\n                \t<textarea id="contact_message" placeholder="Your Message" name="message" rows="15" cols="40"></textarea>\n                </p>\n                <p class="contact-submit">\n                \t<span id="contact-submit" data-send-contactmail class="submit">Send Your Email</span>\n                </p>\n                <div id="response">\n                \n                </div>\n            </form>\n```\n\nWith a **data-send-contactmail** defined button. Than just link this module to your configuration. \n\n## Configuration\n\n```\napostrophe-contactmail: { \n    sendto: \'foo@example.com\'\n}\n```\n\n### Mandetory parameters\n\n|:--------------------------|----|\n|sendto                       | The email reciver address for this contact form  |  \n\n\n### Optional parameters:\n\n|:--------------------------|----|\n|subjectprefix             | A prefix to the subject field |  \n|text.success and text.error             | Content display on success or failure |  \n\n## Dependency ##\n\nMake sure to configure mailer in apostrophe! \n\n\n\n',
+18 silly publish   readmeFilename: 'README.md',
+18 silly publish   gitHead: 'ef4ce97ee3e1399db23ed554d43a8e0bad7bc376',
+18 silly publish   _id: 'apostrophe-contactmail@1.0.0',
+18 silly publish   scripts: {},
+18 silly publish   _shasum: 'f2c696a982137f22f0f9e41213e58ee9b66787c7',
+18 silly publish   _from: '.' }
+19 silly mapToRegistry name apostrophe-contactmail
+20 silly mapToRegistry using default registry
+21 silly mapToRegistry registry https://registry.npmjs.org/
+22 silly mapToRegistry uri https://registry.npmjs.org/apostrophe-contactmail
+23 verbose publish registryBase https://registry.npmjs.org/
+24 silly publish uploading /Users/kris/.npm/apostrophe-contactmail/1.0.0/package.tgz
+25 verbose request uri https://registry.npmjs.org/apostrophe-contactmail
+26 verbose request sending authorization for write operation
+27 info attempt registry request try #1 at 01:12:01
+28 verbose request id 170b6cd3bed79797
+29 http request PUT https://registry.npmjs.org/apostrophe-contactmail
+30 http 403 https://registry.npmjs.org/apostrophe-contactmail
+31 verbose headers { date: 'Mon, 19 Jan 2015 00:12:02 GMT',
+31 verbose headers   server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+31 verbose headers   'content-type': 'application/json',
+31 verbose headers   'cache-control': 'max-age=60',
+31 verbose headers   'content-length': '4766',
+31 verbose headers   'accept-ranges': 'bytes',
+31 verbose headers   via: '1.1 varnish',
+31 verbose headers   'x-served-by': 'cache-fra1225-FRA',
+31 verbose headers   'x-cache': 'MISS',
+31 verbose headers   'x-cache-hits': '0',
+31 verbose headers   'x-timer': 'S1421626321.542539,VS0,VE1004',
+31 verbose headers   'keep-alive': 'timeout=10, max=50',
+31 verbose headers   connection: 'Keep-Alive' }
+32 verbose request invalidating /Users/kris/.npm/registry.npmjs.org/apostrophe-contactmail on PUT
+33 error publish Failed PUT 403
+34 verbose stack Error: forbidden cannot modify pre-existing version: 1.0.0
+34 verbose stack old={"name":"apostrophe-contactmail","version":"1.0.0","description":"Contact form mailer for apostrophe cms","main":"index.js","repository":{"type":"git","url":"https://github.com/petershaw/apostrophe-contactmail.git"},"keywords":["apostrophe","email","contact"],"author":{"name":"Peter Shaw"},"license":"none","bugs":{"url":"https://github.com/petershaw/apostrophe-contactmail/issues"},"homepage":"https://github.com/petershaw/apostrophe-contactmail","dependencies":{"chalk":"^0.5.1","extend":"^2.0.0","nodemailer":"^1.3.0","underscore":"^1.7.0","uuid":"^2.0.1"},"gitHead":"ef4ce97ee3e1399db23ed554d43a8e0bad7bc376","_id":"apostrophe-contactmail@1.0.0","scripts":{},"_shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","_from":".","_npmVersion":"2.1.18","_nodeVersion":"0.10.35","_npmUser":{"name":"petershaw","email":"unthoughted@googlemail.com"},"maintainers":[{"name":"petershaw","email":"unthoughted@googlemail.com"}],"dist":{"shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","tarball":"http://registry.npmjs.org/apostrophe-contactmail/-/apostrophe-contactmail-1.0.0.tgz"}}
+34 verbose stack new={"name":"apostrophe-contactmail","version":"1.0.0","description":"Contact form mailer for apostrophe cms","main":"index.js","repository":{"type":"git","url":"https://github.com/petershaw/apostrophe-contactmail.git"},"keywords":["apostrophe","email","contact"],"author":{"name":"Peter Shaw"},"license":"none","bugs":{"url":"https://github.com/petershaw/apostrophe-contactmail/issues"},"homepage":"https://github.com/petershaw/apostrophe-contactmail","dependencies":{"chalk":"^0.5.1","extend":"^2.0.0","nodemailer":"^1.3.0","underscore":"^1.7.0","uuid":"^2.0.1"},"readme":"# apostrophe-contactmail\u000aContact form mailer for apostrophe cms\u000a\u000a**Attention: This script is not secure against a script. The worst case is that someone spams your inbox.**\u000a\u000aYou have to create a block or a snippet with a email form: \u000a\u000a```html\u000a<form id=\"contact-form\" class=\"contact-form\" action=\"#\">\u000a            \u0009<p class=\"contact-name\">\u000a            \u0009\u0009<input id=\"contact_name\" type=\"text\" placeholder=\"Full Name\" value=\"\" name=\"name\" />\u000a                </p>\u000a                <p class=\"contact-email\">\u000a                \u0009<input id=\"contact_email\" type=\"text\" placeholder=\"Email Address\" value=\"\" name=\"email\" />\u000a                </p>\u000a                <p class=\"contact-message\">\u000a                \u0009<textarea id=\"contact_message\" placeholder=\"Your Message\" name=\"message\" rows=\"15\" cols=\"40\"></textarea>\u000a                </p>\u000a                <p class=\"contact-submit\">\u000a                \u0009<span id=\"contact-submit\" data-send-contactmail class=\"submit\">Send Your Email</span>\u000a                </p>\u000a                <div id=\"response\">\u000a                \u000a                </div>\u000a            </form>\u000a```\u000a\u000aWith a **data-send-contactmail** defined button. Than just link this module to your configuration. \u000a\u000a## Configuration\u000a\u000a```\u000aapostrophe-contactmail: { \u000a    sendto: 'foo@example.com'\u000a}\u000a```\u000a\u000a### Mandetory parameters\u000a\u000a|:--------------------------|----|\u000a|sendto                       | The email reciver address for this contact form  |  \u000a\u000a\u000a### Optional parameters:\u000a\u000a|:--------------------------|----|\u000a|subjectprefix             | A prefix to the subject field |  \u000a|text.success and text.error             | Content display on success or failure |  \u000a\u000a## Dependency ##\u000a\u000aMake sure to configure mailer in apostrophe! \u000a\u000a\u000a\u000a","readmeFilename":"README.md","gitHead":"ef4ce97ee3e1399db23ed554d43a8e0bad7bc376","_id":"apostrophe-contactmail@1.0.0","scripts":{},"_shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","_from":".","_npmVersion":"2.1.18","_nodeVersion":"0.10.35","_npmUser":{"name":"petershaw","email":"unthoughted@googlemail.com"},"maintainers":[{"name":"petershaw","email":"unthoughted@googlemail.com"}],"dist":{"shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","tarball":"http://registry.npmjs.org/apostrophe-contactmail/-/apostrophe-contactmail-1.0.0.tgz"}}: apostrophe-contactmail
+34 verbose stack     at CachingRegistryClient.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:244:14)
+34 verbose stack     at Request._callback (/usr/local/lib/node_modules/npm/node_modules/npm-registry-client/lib/request.js:172:14)
+34 verbose stack     at Request.self.callback (/usr/local/lib/node_modules/npm/node_modules/request/request.js:373:22)
+34 verbose stack     at Request.emit (events.js:98:17)
+34 verbose stack     at Request.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1318:14)
+34 verbose stack     at Request.emit (events.js:117:20)
+34 verbose stack     at IncomingMessage.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/request/request.js:1266:12)
+34 verbose stack     at IncomingMessage.emit (events.js:117:20)
+34 verbose stack     at _stream_readable.js:944:16
+34 verbose stack     at process._tickCallback (node.js:442:13)
+35 verbose statusCode 403
+36 verbose pkgid apostrophe-contactmail
+37 verbose cwd /Users/kris/Projects/apostrophe-contactmail
+38 error Darwin 14.0.0
+39 error argv "node" "/usr/local/bin/npm" "publish"
+40 error node v0.10.35
+41 error npm  v2.1.18
+42 error code E403
+43 error forbidden cannot modify pre-existing version: 1.0.0
+43 error old={"name":"apostrophe-contactmail","version":"1.0.0","description":"Contact form mailer for apostrophe cms","main":"index.js","repository":{"type":"git","url":"https://github.com/petershaw/apostrophe-contactmail.git"},"keywords":["apostrophe","email","contact"],"author":{"name":"Peter Shaw"},"license":"none","bugs":{"url":"https://github.com/petershaw/apostrophe-contactmail/issues"},"homepage":"https://github.com/petershaw/apostrophe-contactmail","dependencies":{"chalk":"^0.5.1","extend":"^2.0.0","nodemailer":"^1.3.0","underscore":"^1.7.0","uuid":"^2.0.1"},"gitHead":"ef4ce97ee3e1399db23ed554d43a8e0bad7bc376","_id":"apostrophe-contactmail@1.0.0","scripts":{},"_shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","_from":".","_npmVersion":"2.1.18","_nodeVersion":"0.10.35","_npmUser":{"name":"petershaw","email":"unthoughted@googlemail.com"},"maintainers":[{"name":"petershaw","email":"unthoughted@googlemail.com"}],"dist":{"shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","tarball":"http://registry.npmjs.org/apostrophe-contactmail/-/apostrophe-contactmail-1.0.0.tgz"}}
+43 error new={"name":"apostrophe-contactmail","version":"1.0.0","description":"Contact form mailer for apostrophe cms","main":"index.js","repository":{"type":"git","url":"https://github.com/petershaw/apostrophe-contactmail.git"},"keywords":["apostrophe","email","contact"],"author":{"name":"Peter Shaw"},"license":"none","bugs":{"url":"https://github.com/petershaw/apostrophe-contactmail/issues"},"homepage":"https://github.com/petershaw/apostrophe-contactmail","dependencies":{"chalk":"^0.5.1","extend":"^2.0.0","nodemailer":"^1.3.0","underscore":"^1.7.0","uuid":"^2.0.1"},"readme":"# apostrophe-contactmail\u000aContact form mailer for apostrophe cms\u000a\u000a**Attention: This script is not secure against a script. The worst case is that someone spams your inbox.**\u000a\u000aYou have to create a block or a snippet with a email form: \u000a\u000a```html\u000a<form id=\"contact-form\" class=\"contact-form\" action=\"#\">\u000a            \u0009<p class=\"contact-name\">\u000a            \u0009\u0009<input id=\"contact_name\" type=\"text\" placeholder=\"Full Name\" value=\"\" name=\"name\" />\u000a                </p>\u000a                <p class=\"contact-email\">\u000a                \u0009<input id=\"contact_email\" type=\"text\" placeholder=\"Email Address\" value=\"\" name=\"email\" />\u000a                </p>\u000a                <p class=\"contact-message\">\u000a                \u0009<textarea id=\"contact_message\" placeholder=\"Your Message\" name=\"message\" rows=\"15\" cols=\"40\"></textarea>\u000a                </p>\u000a                <p class=\"contact-submit\">\u000a                \u0009<span id=\"contact-submit\" data-send-contactmail class=\"submit\">Send Your Email</span>\u000a                </p>\u000a                <div id=\"response\">\u000a                \u000a                </div>\u000a            </form>\u000a```\u000a\u000aWith a **data-send-contactmail** defined button. Than just link this module to your configuration. \u000a\u000a## Configuration\u000a\u000a```\u000aapostrophe-contactmail: { \u000a    sendto: 'foo@example.com'\u000a}\u000a```\u000a\u000a### Mandetory parameters\u000a\u000a|:--------------------------|----|\u000a|sendto                       | The email reciver address for this contact form  |  \u000a\u000a\u000a### Optional parameters:\u000a\u000a|:--------------------------|----|\u000a|subjectprefix             | A prefix to the subject field |  \u000a|text.success and text.error             | Content display on success or failure |  \u000a\u000a## Dependency ##\u000a\u000aMake sure to configure mailer in apostrophe! \u000a\u000a\u000a\u000a","readmeFilename":"README.md","gitHead":"ef4ce97ee3e1399db23ed554d43a8e0bad7bc376","_id":"apostrophe-contactmail@1.0.0","scripts":{},"_shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","_from":".","_npmVersion":"2.1.18","_nodeVersion":"0.10.35","_npmUser":{"name":"petershaw","email":"unthoughted@googlemail.com"},"maintainers":[{"name":"petershaw","email":"unthoughted@googlemail.com"}],"dist":{"shasum":"f2c696a982137f22f0f9e41213e58ee9b66787c7","tarball":"http://registry.npmjs.org/apostrophe-contactmail/-/apostrophe-contactmail-1.0.0.tgz"}}: apostrophe-contactmail
+44 error If you need help, you may report this error at:
+44 error     <http://github.com/npm/npm/issues>
+45 verbose exit [ 1, true ]

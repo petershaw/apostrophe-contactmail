@@ -1,0 +1,28 @@
+{
+  "name": "apostrophe-contactmail",
+  "version": "1.0.0",
+  "description": "Contact form mailer for apostrophe cms",
+  "main": "index.js",
+   "repository": {
+    "type": "git",
+    "url": "https://github.com/petershaw/apostrophe-contactmail.git"
+  },
+  "keywords": [
+    "apostrophe",
+    "email",
+    "contact"
+  ],
+  "author": "Peter Shaw",
+  "license": "none",
+  "bugs": {
+    "url": "https://github.com/petershaw/apostrophe-contactmail/issues"
+  },
+  "homepage": "https://github.com/petershaw/apostrophe-contactmail",
+  "dependencies": {
+    "chalk": "^0.5.1",
+    "extend": "^2.0.0",
+    "nodemailer": "^1.3.0",
+    "underscore": "^1.7.0",
+    "uuid": "^2.0.1"
+  }
+}

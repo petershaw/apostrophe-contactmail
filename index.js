@@ -15,7 +15,6 @@ module.exports.Construct = Construct;
 /** generates a server token **/
 function generateToken(){
 	var token = uuid.v4();
-	console.log("Generate token: ", token);
 	return token;
 }
 
@@ -58,13 +57,11 @@ function Construct(options, callback) {
 			token: clienttoken
 		};
 		req.session.save();
-		console.log(req.session);
 		res.statusCode = 200;
 		return res.json({token: clienttoken});
 	});
 	
 	app.post('/apos-contactmail/send', function(req, res) {
-		console.log("sessionID", req.sessionID); // do something with thw sessionid
 		if (self._apos._aposLocals.offline) {
 			res.statusCode = 404;
 			return res.send({error: 'offline'});
@@ -98,7 +95,6 @@ function Construct(options, callback) {
 			text: req.body.message
 		}, function(err, info){
 			if(err){
-				console.log(err);
 				res.statusCode = 500;
 				return res.send({error: err.code});
 			}

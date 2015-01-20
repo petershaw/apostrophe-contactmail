@@ -53,6 +53,7 @@ function Construct(options, callback) {
 			return res.send({error: 'invalid servertoken'});
 		}
 		var clienttoken = generateToken();
+		self.tokenlookup[req.sessionID] = clienttoken;
 		req.session.contactmail = {
 			token: clienttoken
 		};
@@ -85,14 +86,24 @@ function Construct(options, callback) {
 			res.statusCode = 401;
 			return res.send({error: 'invalid token'});
 		}
+		if( !self.tokenlookup[req.sessionID] || self.tokenlookup[req.sessionID] != req.headers['x-client-token'] ){
+			res.statusCode = 401;
+			return res.send({error: 'token lookup failed'});
+		}
+		
+		delete self.tokenlookup[req.sessionID];
+		delete req.session.contactmail.token;
 		
 		// sending mail ... 
-			
+		var data = _.omit(req.body, 'message');
 		self.options.mailer.sendMail({
 			from: req.body.email || 'apostrophe-contactmail',
 			to: self.options.sendto,
 			subject: (self.options.subjectprefix || '')+ req.body.subject || '',
-			text: req.body.message
+			text: ''
+				+ JSON.stringify(data) +'\n'
+				+ '----------------------\n'
+				+ req.body.message 
 		}, function(err, info){
 			if(err){
 				res.statusCode = 500;
@@ -102,7 +113,7 @@ function Construct(options, callback) {
 			return res.json({status: 'ok', response: info});
 		});
 		
-		
+		req.session.save();
 	});
 
 	return setImmediate(function() { return callback(null); });

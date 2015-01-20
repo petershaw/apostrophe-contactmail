@@ -1,6 +1,6 @@
 {
   "name": "apostrophe-contactmail",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Contact form mailer for apostrophe cms",
   "main": "index.js",
    "repository": {

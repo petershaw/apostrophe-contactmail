@@ -1,8 +1,10 @@
 # apostrophe-contactmail
 Contact form mailer for apostrophe cms
 
-**Attention: This script is not really secure against a script attack. The worst case is that someone spams your inbox.** I did a basic token exchange, but nothing, that a script can't do. Remember: everything that a browser can do, a script can do, too. 
+## Disclaimer 
+I did a basic token exchange, but nothing, that a script can't spoof. Remember: everything that a browser can do, a script can do, too. 
 
+## How to
 You have to create a block or a snippet with a email form: 
 
 ```html

@@ -1,6 +1,8 @@
 # apostrophe-contactmail
 Contact form mailer for apostrophe cms
 
+DISCONTINUED WITH APOSTROPHE VERSION 2
+
 ## Disclaimer 
 I did a basic token exchange, but nothing, that a script can't spoof. Remember: everything that a browser can do, a script can do, too. 
 
